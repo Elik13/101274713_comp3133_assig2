@@ -1,0 +1,12 @@
+﻿<div>
+  <h1>Hi {{currentUser.firstName}}!</h1>
+  <h3>All registered users:</h3>
+
+  <!--TODO refactor to table-->
+  <ul>
+    <li *ngFor="let user of users">
+      {{user.username}} ({{user.firstName}} {{user.lastName}}): {{user.role}}
+      - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+    </li>
+  </ul>
+</div>
