@@ -40,14 +40,8 @@ export class HomeComponent implements OnInit {
             .subscribe(() => this.loadAllListings());
     }
 
-    createListing() {
-        // this.router.re
-    }
-
-    addListing(listing: Listing) {
-        this.listingService.add(listing)
-            .pipe(first())
-            .subscribe(() => this.loadAllListings());
+    addListing() {
+        this.router.navigate(['/add-listing']);
     }
 
     private loadAllUsers() {
